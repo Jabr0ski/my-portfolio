@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Projects</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='style.css'>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <p>
+      Serhat
+      <br/>
+      Hayrebetoglu
+    </p>
+    <!-- <p>A website created by me.</p> -->
+  </div>
+  <div class="navbar">
+    <!-- <a href="#">Link</a>
+    <a href="#">Link</a> -->
+    <a href="#Projects" class="itemselected" onclick="goToProjects()">PROJECTS</a>
+    <a href="#About" class="itemdeselected" onclick="goToAbout()">ABOUT</a>
+  </div>
+  <div class="body">
+    <div class="main-container">
+      <div class="projects">
+        <a href="#">
+            <img src="images/landshape.png" class="thumbnail">
+        </a>
+        <a href="#">
+            <img src="images/alarm.png" class="thumbnail">
+        </a>
+        <a href="#">
+          <img src="images/inspire.png" class="thumbnail">
+      </a>
+      </div>
+    </div>
+    <!-- <p> test </p> -->
+  </div>
+
+  <div class="footer">
+    <h2>Footer</h2>
+  </div> 
+
+</body>
+
+<script>
+  function goToProjects()
+  {
+      window.location.href = 'index.html';
+  }
+  function goToAbout()
+  {
+      window.location.href = 'about.html';
+  }
+</script>
+
+</html>

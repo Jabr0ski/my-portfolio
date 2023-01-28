@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>About</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='style.css'>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <p>
+      Serhat
+      <br/>
+      Hayrebetoglu
+    </p>
+    <!-- <p>A website created by me.</p> -->
+  </div>
+  <div class="navbar">
+    <!-- <a href="#">Link</a>
+    <a href="#">Link</a> -->
+    <a href="#Projects" class="itemdeselected" onclick="goToProjects()">PROJECTS</a>
+    <a href="#About" class="itemselected" onclick="goToAbout()">ABOUT</a>
+  </div>
+  <div class="body">
+    <p> about page </p>
+  </div>
+  
+  <div class="footer">
+    <h2>Footer</h2>
+  </div>
+
+</body>
+
+<script>
+  function goToProjects()
+  {
+      window.location.href = 'index.html';
+  }
+  function goToAbout()
+  {
+      window.location.href = 'about.html';
+  }
+</script>
+
+</html>

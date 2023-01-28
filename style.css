@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'baksosapi';
+    src: url('fonts/BaksoSapi.woff') format('woff'),
+         url('fonts/BaksoSapi.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('fonts/BebasNeue-Regular.woff') format('woff'),
+         url('fonts/BebasNeue-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'blowbrush';
+    src: url('fonts/blowbrush.woff') format('woff'),
+         url('fonts/blowbrush.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TrashHand';
+    src: url('fonts/TrashHand.woff') format('woff'),
+         url('fonts/TrashHand.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-image: url('images/anime-sea.jpg');
+  }  
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.header {
+    padding: 10px;
+    padding-bottom: 5px;
+    /* some padding */
+    /* padding-left: 25px; */
+    text-align: center;
+    /* center the text */
+    /* background: rgb(252, 183, 34); */
+    background-color: transparent;
+    /* background-image: url('images/anime-sea.jpg'); */
+    /* background-image:linear-gradient(to bottom, black 0%, yellow 100%); */
+    color: white;
+    font-size: 70px;
+    letter-spacing: 8px;
+    text-shadow: black 1px 1px,black 0px 0px,black 1px 1px,black 2px 2px,black 3px 3px,black 4px 4px,black 5px 5px,black 6px 6px,black 7px 7px,black 8px 8px;/*#4A744D 9px 9px,#4A744D 10px 10px,#4A744D 11px 11px,#4A744D 12px 12px;*/
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+    /* text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9); */
+    font-family: 'blowbrush';
+    /* z-index: -2; */
+}
+
+/* Increase the font size of the <h1> element */
+.header h1 {
+    font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+    overflow: hidden;
+    /* Hide overflow */
+    display: flex;
+    /* position: absolute; */
+    /* padding-top: 8px; */
+    justify-content: space-evenly;
+    /* background-color: rgb(252, 183, 34); */
+    background-color: transparent;
+    /* border-bottom-style: solid;
+    border-width: 2px; */
+    /* Dark background color */
+    /* z-index: 1; */
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    /* display: block; */
+    /* Change the display to block, for responsive reasons (see below) */
+    color: black;
+    /* White text color */
+    text-align: center;
+    /* Center the text */
+    padding: 10px 26px;
+    /* height: inherit; */
+    /* padding: 1% 23%; */
+    /* border-spacing: 20%; */
+    /* border-width: 300px; */
+    /* Add some padding */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.navbar a.itemselected{
+    border-radius: 8px 8px 0px 0px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: 4px;
+    width: 250px;
+    font-family: 'BebasNeue';
+    letter-spacing: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(235, 212, 138);
+    /* text-decoration-line: underline; */
+    /* background-image: linear-gradient(to bottom, rgb(158, 127, 42) 50%, rgb(235, 212, 138) 50%); */
+    background-size: 100% 300%;
+    transition: background-position 0.5s;
+}
+
+.navbar a.itemdeselected{
+    border-radius: 8px 8px 0px 0px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-width: 4px;
+    width: 250px;
+    font-family: 'BebasNeue';
+    letter-spacing: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, rgb(158, 127, 42) 50%, rgb(235, 212, 138) 50%);
+    background-size: 100% 300%;
+    transition: background-position 0.5s;
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+    /* background-color: #ddd; */
+    /* color: black; */
+    background-position: 0 100%;
+    /* border-bottom-color: rgb(235, 212, 138);
+    border-bottom-width: 4px; */
+    height: 150%;
+}
+
+.projects {
+    /* overflow: hidden; */
+    /* Hide overflow */
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+  }
+
+.thumbnail {
+    object-fit: cover;
+    /* width: 100%; */
+    height: 180px;
+    object-position: 25% 25%;
+    transition: 0.5s;
+    opacity: 50%;
+    padding: 5px;
+    width: 95%;
+    /* border-width: 10px; */
+      /* Add the blur effect */
+    filter: blur(1px);
+    /* -webkit-filter: blur(1px); */
+
+  }
+
+  .thumbnail:hover {
+    width: 99%;
+    /* height: auto; */
+    /* height: 30%; */
+    /* object-position: 0% 0%; */
+    opacity: 1;
+    opacity: 80%;
+      /* Add the blur effect */
+    filter: blur(0px);
+    /* -webkit-filter: blur(0px); */
+    }
+
+.body {
+    display: flex;
+    background-color: rgb(235, 212, 138);
+    align-items: center;
+}
+
+.footer {
+    padding: 20px;
+    /* Some padding */
+    text-align: center;
+    /* Center text*/
+    background: #ddd;
+    /* Grey background */
+}
