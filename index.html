@@ -11,6 +11,7 @@
       font-family: Arial, Helvetica, sans-serif;
     }
   </style>
+  <link rel="preload" as="image" href="Images/anime-sea.jpg">
 </head>
 
 <body>
@@ -26,13 +27,13 @@
   <div class="navbar">
     <!-- <a href="#">Link</a>
     <a href="#">Link</a> -->
-    <a href="#Projects" class="itemselected" onclick="goToProjects()">PROJECTS</a>
-    <a href="#About" class="itemdeselected" onclick="goToAbout()">ABOUT</a>
+    <a href="#Projects" class="itemselected" onclick="goTo('index')">PROJECTS</a>
+    <a href="#About" class="itemdeselected" onclick="goTo('about')">ABOUT</a>
   </div>
   <div class="body">
     <div class="main-container">
       <div class="projects">
-        <a href="#">
+        <a href="#" onclick="goTo('landshape-iframe')">
             <img src="Images/landshape.png" class="thumbnail">
         </a>
         <a href="#">
@@ -47,19 +48,16 @@
   </div>
 
   <div class="footer">
-    <h2>Footer</h2>
+    <img src="Images/leftfoot.png" class="leftfoot">
+    <img src="Images/rightfoot.png" class="rightfoot">
   </div> 
 
 </body>
 
 <script>
-  function goToProjects()
+  function goTo(page)
   {
-      window.location.href = 'index.html';
-  }
-  function goToAbout()
-  {
-      window.location.href = 'about.html';
+      window.location.href = page + '.html';
   }
 </script>
 

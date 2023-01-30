@@ -1,12 +1,4 @@
 @font-face {
-    font-family: 'baksosapi';
-    src: url('Fonts/BaksoSapi.woff') format('woff'),
-         url('Fonts/BaksoSapi.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'BebasNeue';
     src: url('Fonts/BebasNeue-Regular.woff') format('woff'),
          url('Fonts/BebasNeue-Regular.woff2') format('woff2');
@@ -22,18 +14,10 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'TrashHand';
-    src: url('Fonts/TrashHand.woff') format('woff'),
-         url('Fonts/TrashHand.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
 html, body {
     margin: 0;
     padding: 0;
-    background-image: url('images/anime-sea.jpg');
+    background-image: url('Images/anime-sea.jpg');
   }  
 
 .main-container {
@@ -49,22 +33,13 @@ html, body {
 .header {
     padding: 10px;
     padding-bottom: 5px;
-    /* some padding */
-    /* padding-left: 25px; */
     text-align: center;
-    /* center the text */
-    /* background: rgb(252, 183, 34); */
     background-color: transparent;
-    /* background-image: url('images/anime-sea.jpg'); */
-    /* background-image:linear-gradient(to bottom, black 0%, yellow 100%); */
     color: white;
     font-size: 70px;
     letter-spacing: 8px;
     text-shadow: black 1px 1px,black 0px 0px,black 1px 1px,black 2px 2px,black 3px 3px,black 4px 4px,black 5px 5px,black 6px 6px,black 7px 7px,black 8px 8px;/*#4A744D 9px 9px,#4A744D 10px 10px,#4A744D 11px 11px,#4A744D 12px 12px;*/
-    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
-    /* text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9); */
     font-family: 'blowbrush';
-    /* z-index: -2; */
 }
 
 /* Increase the font size of the <h1> element */
@@ -115,7 +90,7 @@ html, body {
     width: 250px;
     font-family: 'BebasNeue';
     letter-spacing: 4px;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     background-color: rgb(235, 212, 138);
     /* text-decoration-line: underline; */
@@ -133,10 +108,11 @@ html, body {
     width: 250px;
     font-family: 'BebasNeue';
     letter-spacing: 4px;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    background-image: linear-gradient(to bottom, rgb(158, 127, 42) 50%, rgb(235, 212, 138) 50%);
+    background-image: linear-gradient(to top, rgb(158, 127, 42) 70%, rgb(235, 212, 138) 70%);
     background-size: 100% 300%;
+    background-position: -100%;
     transition: background-position 0.5s;
 }
 
@@ -144,10 +120,10 @@ html, body {
 .navbar a:hover {
     /* background-color: #ddd; */
     /* color: black; */
-    background-position: 0 100%;
+    background-position: 0 0%;
     /* border-bottom-color: rgb(235, 212, 138);
     border-bottom-width: 4px; */
-    height: 150%;
+    height: 400%;
 }
 
 .projects {
@@ -192,11 +168,61 @@ html, body {
     align-items: center;
 }
 
+
+
 .footer {
-    padding: 20px;
+    overflow: hidden;
+    /* Hide overflow */
+    display: flex;
+    /* position: absolute; */
+    /* padding-top: 8px; */
+    justify-content:space-between;
+    background-image: url('Images/anime-sea.jpg');
+    /* background-color: transparent; */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
     /* Some padding */
     text-align: center;
+    transform:scaleX(-1);
     /* Center text*/
-    background: #ddd;
+    /* background: rgb(158, 127, 42); */
     /* Grey background */
 }
+
+.leftfoot {
+    animation: updown 2s ease infinite;
+}
+
+.rightfoot {
+    animation: downup 2s ease infinite;
+}
+
+@keyframes updown {
+    0% {
+      transform: translateY(-50%);
+    }
+  
+    50% {
+      transform: translateY(0%);
+    }
+  
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+
+
+  @keyframes downup {
+    0% {
+      transform: translateY(0%);
+    }
+  
+    50% {
+      transform: translateY(-50%);
+    }
+  
+    100% {
+      transform: translateY(0%);
+    }
+  }
