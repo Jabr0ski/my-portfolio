@@ -1,31 +1,31 @@
 @font-face {
     font-family: 'baksosapi';
-    src: url('fonts/BaksoSapi.woff') format('woff'),
-         url('fonts/BaksoSapi.woff2') format('woff2');
+    src: url('Fonts/BaksoSapi.woff') format('woff'),
+         url('Fonts/BaksoSapi.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'BebasNeue';
-    src: url('fonts/BebasNeue-Regular.woff') format('woff'),
-         url('fonts/BebasNeue-Regular.woff2') format('woff2');
+    src: url('Fonts/BebasNeue-Regular.woff') format('woff'),
+         url('Fonts/BebasNeue-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'blowbrush';
-    src: url('fonts/blowbrush.woff') format('woff'),
-         url('fonts/blowbrush.woff2') format('woff2');
+    src: url('Fonts/blowbrush.woff') format('woff'),
+         url('Fonts/blowbrush.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'TrashHand';
-    src: url('fonts/TrashHand.woff') format('woff'),
-         url('fonts/TrashHand.woff2') format('woff2');
+    src: url('Fonts/TrashHand.woff') format('woff'),
+         url('Fonts/TrashHand.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
