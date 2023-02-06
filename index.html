@@ -33,15 +33,14 @@
   <div class="body">
     <div class="main-container">
       <div class="projects">
-        <a href="#" onclick="goTo('landshape-iframe')">
-            <img src="Images/landshape.png" class="thumbnail">
-        </a>
-        <a href="#">
-            <img src="Images/alarm.png" class="thumbnail">
-        </a>
-        <a href="#">
-          <img src="Images/inspire.png" class="thumbnail">
-      </a>
+          <img src="Images/landshape.png" class="thumbnail" onclick="iframeState('landshape-app')">
+          <iframe id="landshape-app" src="https://jabr0ski.github.io/landshape-app/" title="landshape" class="iframeClose"></iframe>
+
+          <img src="Images/alarm.png" class="thumbnail" onclick="iframeState('alarm-app')">
+          <iframe id="alarm-app" src="https://jabr0ski.github.io/alarm-app/" title="alarm" class="iframeClose"></iframe>
+
+          <img src="Images/inspire.png" class="thumbnail" onclick="iframeState('inspire-app')">
+          <iframe id="inspire-app" src="https://jabr0ski.github.io/inspire/" title="inspire" class="iframeClose"></iframe>
       </div>
     </div>
     <!-- <p> test </p> -->
@@ -58,6 +57,18 @@
   function goTo(page)
   {
       window.location.href = page + '.html';
+  }
+  function iframeState(id)
+  {
+    if ( document.getElementById(id).classList.contains('iframeClose')){
+      document.getElementById(id).classList.remove('iframeClose');
+      document.getElementById(id).classList.add('iframeOpen');
+      console.log("opening " + id)
+    } else {
+      document.getElementById(id).classList.remove('iframeOpen');
+      document.getElementById(id).classList.add('iframeClose');
+      console.log("closing " + id)
+    }
   }
 </script>
 
