@@ -18,6 +18,7 @@ html, body {
     margin: 0;
     padding: 0;
     background-image: url('Images/anime-sea.jpg');
+    background-attachment: fixed;
   }  
 
 .main-container {
@@ -138,6 +139,7 @@ html, body {
     object-fit: cover;
     cursor: pointer;
     /* width: 100%; */
+    align-self: center;
     height: 180px;
     object-position: 25% 25%;
     transition: 0.5s;
@@ -186,6 +188,7 @@ html, body {
     /* position: absolute; */
     /* padding-top: 8px; */
     justify-content:space-between;
+    background-attachment: fixed;
     background-image: url('Images/anime-sea.jpg');
     /* background-color: transparent; */
     padding-left: 20px;
@@ -194,6 +197,7 @@ html, body {
     /* Some padding */
     text-align: center;
     transform:scaleX(-1);
+
     /* Center text*/
     /* background: rgb(158, 127, 42); */
     /* Grey background */

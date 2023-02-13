@@ -39,8 +39,8 @@
           <img src="Images/alarm.png" class="thumbnail" onclick="iframeState('alarm-app')">
           <iframe id="alarm-app" src="https://jabr0ski.github.io/alarm-app/" title="alarm" class="iframeClose"></iframe>
 
-          <img src="Images/inspire.png" class="thumbnail" onclick="iframeState('inspire-app')">
-          <iframe id="inspire-app" src="https://jabr0ski.github.io/inspire/" title="inspire" class="iframeClose"></iframe>
+          <img src="Images/inspire.png" class="thumbnail" onclick="iframeState('inspire')">
+          <iframe id="inspire" src="https://jabr0ski.github.io/inspire/" title="inspire" class="iframeClose"></iframe>
       </div>
     </div>
     <!-- <p> test </p> -->
@@ -60,14 +60,12 @@
   }
   function iframeState(id)
   {
-    if ( document.getElementById(id).classList.contains('iframeClose')){
-      document.getElementById(id).classList.remove('iframeClose');
-      document.getElementById(id).classList.add('iframeOpen');
-      console.log("opening " + id)
+    document.getElementById(id).classList.toggle('iframeClose');
+    document.getElementById(id).classList.toggle('iframeOpen');
+    if (document.getElementById(id).classList.contains('iframeOpen')){
+      document.getElementById(id).src = 'https://jabr0ski.github.io/'+id+'/'
     } else {
-      document.getElementById(id).classList.remove('iframeOpen');
-      document.getElementById(id).classList.add('iframeClose');
-      console.log("closing " + id)
+      document.getElementById(id).src = ''
     }
   }
 </script>
