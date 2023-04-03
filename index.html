@@ -24,25 +24,30 @@
     </p>
     <!-- <p>A website created by me.</p> -->
   </div>
-  <div class="navbar">
+  <div class="navbar" id="navbar">
     <!-- <a href="#">Link</a>
     <a href="#">Link</a> -->
-    <a href="#Projects" class="itemselected" onclick="goTo('index')">PROJECTS</a>
-    <a href="#About" class="itemdeselected" onclick="goTo('about')">ABOUT</a>
+    <a href="#Projects" class="itemselected" onclick="deleteOtherBodies('projects')" id="projectsTab">PROJECTS</a>
+    <a href="#About" class="itemdeselected" onclick="deleteOtherBodies('about')" id="aboutTab">ABOUT</a>
   </div>
-  <div class="body">
+  <div class="body" id="projects">
     <div class="main-container">
       <div class="projects">
           <img src="Images/landshape.png" class="thumbnail" onclick="iframeState('landshape-app')">
-          <iframe id="landshape-app" src="https://jabr0ski.github.io/landshape-app/" title="landshape" class="iframeClose"></iframe>
+          <iframe id="landshape-app" src="https://jabr0ski.github.io/landshape-app/" title="landshape" class="objectClose"></iframe>
 
           <img src="Images/alarm.png" class="thumbnail" onclick="iframeState('alarm-app')">
-          <iframe id="alarm-app" src="https://jabr0ski.github.io/alarm-app/" title="alarm" class="iframeClose"></iframe>
+          <iframe id="alarm-app" src="https://jabr0ski.github.io/alarm-app/" title="alarm" class="objectClose"></iframe>
 
           <img src="Images/inspire.png" class="thumbnail" onclick="iframeState('inspire')">
-          <iframe id="inspire" src="https://jabr0ski.github.io/inspire/" title="inspire" class="iframeClose"></iframe>
+          <iframe id="inspire" src="https://jabr0ski.github.io/inspire/" title="inspire" class="objectClose"></iframe>
       </div>
     </div>
+    <!-- <p> test </p> -->
+  </div>
+
+  <div class="body" id="about">
+    <p> about page </p>
     <!-- <p> test </p> -->
   </div>
 
@@ -54,13 +59,74 @@
 </body>
 
 <script>
-  function goTo(page)
+  function deleteOtherBodies(id){
+    const bodyList = document.getElementsByClassName("body");
+    for (let i = 0; i < bodyList.length; i++) {
+          if (bodyList[i].id != id){
+            document.getElementById(bodyList[i].id).remove();
+          }
+    }
+
+    //tab swapping
+    if (document.getElementById(id+"Tab").classList.contains('itemdeselected')){
+        // document.getElementById(id+"Tab").toggle('itemdeselected');
+        const navList = document.getElementById("navbar").children;
+        for (let i = 0; i < navList.length; i++) {
+          if (document.getElementById(navList[i].id).classList.contains('itemselected')){
+            document.getElementById(navList[i].id).classList.toggle('itemselected');
+            document.getElementById(navList[i].id).classList.toggle('itemdeselected');
+            // console.log(navList[i].id+" untoggled")
+            // console.log(document.getElementById(navList[i].id).classList);
+          }
+          // console.log(navList[i].id+" untouched unless untoggled above")
+          // console.log(document.getElementById(navList[i].id).classList);
+        }
+        document.getElementById(id+"Tab").classList.toggle('itemdeselected');
+        document.getElementById(id+"Tab").classList.toggle('itemselected');
+        // console.log(id+"Tab select toggled");
+        // console.log(document.getElementById(id+"Tab").classList);
+      }
+  }
+  function goTo(id)
   {
-      window.location.href = page + '.html';
+      // window.location.href = page + '.html';
+      if (document.getElementById(id).classList.contains('objectClose')){
+        document.getElementById(id).classList.toggle('objectClose');
+        const bodyList = document.getElementsByClassName("body");
+        for (let i = 0; i < bodyList.length; i++) {
+          if (!document.getElementById(bodyList[i].id).classList.contains('objectClose')){
+            document.getElementById(bodyList[i].id).classList.toggle('objectClose');
+            // document.getElementById(bodyList[i].id).disabled = true
+            console.log(bodyList[i].id+" closed");
+            console.log(document.getElementById(bodyList[i].id).classList);
+          }
+        }
+        document.getElementById(id).classList.toggle('objectClose');
+        // document.getElementById(id).disabled = false
+      }
+      if (document.getElementById(id+"Tab").classList.contains('itemdeselected')){
+        // document.getElementById(id+"Tab").toggle('itemdeselected');
+        const navList = document.getElementById("navbar").children;
+        for (let i = 0; i < navList.length; i++) {
+          if (document.getElementById(navList[i].id).classList.contains('itemselected')){
+            document.getElementById(navList[i].id).classList.toggle('itemselected');
+            document.getElementById(navList[i].id).classList.toggle('itemdeselected');
+            console.log(navList[i].id+" untoggled")
+            console.log(document.getElementById(navList[i].id).classList);
+          }
+          console.log(navList[i].id+" untouched unless untoggled above")
+          console.log(document.getElementById(navList[i].id).classList);
+        }
+        document.getElementById(id+"Tab").classList.toggle('itemdeselected');
+        document.getElementById(id+"Tab").classList.toggle('itemselected');
+        console.log(id+"Tab select toggled");
+        console.log(document.getElementById(id+"Tab").classList);
+      }
+      
   }
   function iframeState(id)
   {
-    document.getElementById(id).classList.toggle('iframeClose');
+    document.getElementById(id).classList.toggle('objectClose');
     document.getElementById(id).classList.toggle('iframeOpen');
     if (document.getElementById(id).classList.contains('iframeOpen')){
       document.getElementById(id).src = 'https://jabr0ski.github.io/'+id+'/'
